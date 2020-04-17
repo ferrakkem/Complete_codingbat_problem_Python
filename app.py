@@ -35,4 +35,24 @@ def monkey_trouble(a_smile, b_smile):
     else:
         return True
 
-print(monkey_trouble(False, True))
+#print(monkey_trouble(False, True))
+
+'''
+Given two int values, return their sum. 
+Unless the two values are the same, then return double their sum.
+
+sum_double(1, 2) → 3
+sum_double(3, 2) → 5
+sum_double(2, 2) → 8
+'''
+def sum_double(num1, num2):
+    sum = 0
+    if (num1 == num2):
+        sum = (num1 + num2)*2
+        return sum
+    else:
+        sum = num1+num2
+        return sum
+
+print(sum_double(2, 2))
+
