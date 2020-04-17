@@ -252,4 +252,22 @@ def front_times(string, number):
     else:
         return front_slice*number
 
-print(front_times('abc', 3))
+#print(front_times('abc', 3))
+
+'''
+Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+
+string_bits('Hello') → 'Hlo'
+string_bits('Hi') → 'H'
+string_bits('Heeololeo') → 'Hello'
+'''
+
+def string_bits(string):
+    result = ""
+    for i in range(len(string)):
+        if i%2 == 0:
+            result = result + string[i]
+    return result
+
+print(string_bits('Heeololeo'))
+
