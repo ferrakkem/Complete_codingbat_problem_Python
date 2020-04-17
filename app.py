@@ -156,5 +156,11 @@ not_string('x') → 'not x'
 not_string('not bad') → 'not bad'
 '''
 
-def not_string():
-    pass
+def not_string(sting):
+    checking_value = 'Not'
+    if not checking_value.upper() in sting.upper():
+        return "Not " + sting
+    else:
+        return sting
+
+print(not_string('Not bad') )
