@@ -316,6 +316,27 @@ def array_count9(number):
             count = count + 1
     return count
 
-print(array_count9([1, 9, 9, 3, 9,9]))
+#print(array_count9([1, 9, 9, 3, 9,9]))
+
+'''
+Given an array of ints, return True if one of the first 4 elements in the array is a 9. 
+The array length may be less than 4.
+
+array_front9([1, 2, 9, 3, 4]) → True
+array_front9([1, 2, 3, 4, 9]) → False
+array_front9([1, 2, 3, 4, 5]) → False
+'''
+
+def array_front9(number):
+    count = 0
+    end = len(number)
+    if end > 4:
+        end = 4
+
+    for i in range(end):
+        if number[i] == 9:
+            return True
+    return False
 
 
+print(array_front9([1, 2, 3, 4, 9]))
