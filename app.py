@@ -234,4 +234,22 @@ def string_times(string, number):
     else:
         return "You input negative number"
 
-print(string_times('Hi', -3))
+#print(string_times('Hi', -3))
+
+'''
+Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, 
+or whatever is there if the string is less than length 3. Return n copies of the front;
+
+front_times('Chocolate', 2) → 'ChoCho'
+front_times('Chocolate', 3) → 'ChoChoCho'
+front_times('Abc', 3) → 'AbcAbcAbc'
+'''
+
+def front_times(string, number):
+    front_slice = string[:3]
+    if (number <= 3):
+        return front_slice*number
+    else:
+        return front_slice*number
+
+print(front_times('abc', 3))
