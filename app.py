@@ -180,5 +180,24 @@ def missing_char(string, n):
     back = string[n + 1:]
     return front + back
 
-print(missing_char('kitten', 1))
+#print(missing_char('kitten', 1))
 
+'''
+Given a string, return a new string where the first and last chars have been exchanged.
+
+front_back('code') → 'eodc'
+front_back('a') → 'a'
+front_back('ab') → 'ba'
+'''
+
+def front_back(str):
+
+    if len(str) <= 1:
+        return str
+
+    front_chrac = str[0]
+    back_chrac = str[-1]
+    rest_chrac = str[1:-1]
+    return  back_chrac + rest_chrac + front_chrac
+
+print(front_back('a'))
