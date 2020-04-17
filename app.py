@@ -108,4 +108,23 @@ def makes10(a, b):
     else:
         return False
 
-print(makes10(1, 9))
+#print(makes10(1, 9))
+
+'''
+Given an int n, return True if it is within 10 of 100 or 200.
+Note: abs(num) computes the absolute value of a number.
+
+near_hundred(93) → True
+near_hundred(90) → True
+near_hundred(89) → False
+'''
+
+def near_hundred(n):
+    diff1 = abs(100 - n)
+    diff2 = abs(200 - n)
+    if (diff1 <= 10 or diff2 <= 10):
+        return True
+    else:
+        return False
+
+print(near_hundred(90))
