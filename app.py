@@ -449,4 +449,31 @@ def first_half(string):
     get_string_length = int(len(string)/2)
     return string[:get_string_length]
 
-print(first_half('HelloThere'))
+#print(first_half('HelloThere'))
+
+'''
+Given a string, return a version without the first and last char,
+so "Hello" yields "ell". The string length will be at least 2.
+
+without_end('Hello') → 'ell'
+without_end('java') → 'av'
+without_end('coding') → 'odin'
+'''
+def without_end(string):
+
+    return string[1:len(string)-1]
+
+print(without_end('coding'))
+
+'''
+Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
+
+non_start('Hello', 'There') → 'ellohere'
+non_start('java', 'code') → 'avaode'
+non_start('shotl', 'java') → 'hotlava
+'''
+
+def non_start(str1, str2):
+    return str1[1:]+str2[1:]
+
+print(non_start('Hello', 'There'))
