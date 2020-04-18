@@ -436,4 +436,17 @@ def first_two(string):
     else:
         return string
 
-print(first_two('ab'))
+#print(first_two('ab'))
+
+'''
+Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+
+first_half('WooHoo') → 'Woo'
+first_half('HelloThere') → 'Hello'
+first_half('abcdef') → 'abc
+'''
+def first_half(string):
+    get_string_length = int(len(string)/2)
+    return string[:get_string_length]
+
+print(first_half('HelloThere'))
