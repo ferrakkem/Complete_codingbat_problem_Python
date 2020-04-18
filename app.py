@@ -402,5 +402,38 @@ def make_out_word (str1, str2):
     return frist+str2+second
 
 
-print(make_out_word('[[]]', 'Yay'))
+#print(make_out_word('[[]]', 'Yay'))
 
+'''
+Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.
+
+extra_end('Hello') → 'lololo'
+extra_end('ab') → 'ababab'
+extra_end('Hi') → 'HiHiHi'
+'''
+
+def extra_end(string):
+    last_two_chars = string[-2:]
+    return last_two_chars*3
+
+#print(extra_end('Hello'))
+
+'''
+Given a string, return the string made of its first two chars, 
+so the String "Hello" yields "He". If the string is shorter than length 2, 
+return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "".
+
+first_two('Hello') → 'He'
+first_two('abcdefg') → 'ab'
+first_two('ab') → 'ab'
+'''
+
+def first_two(string):
+
+    if len(string)>2:
+        first_two_chars = string[:2]
+        return first_two_chars
+    else:
+        return string
+
+print(first_two('ab'))
