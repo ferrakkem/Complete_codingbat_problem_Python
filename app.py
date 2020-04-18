@@ -339,4 +339,20 @@ def array_front9(number):
     return False
 
 
-print(array_front9([1, 2, 3, 4, 9]))
+#print(array_front9([1, 2, 3, 4, 9]))
+
+'''
+Given an array of ints, return True if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+
+array123([1, 1, 2, 3, 1]) → True
+array123([1, 1, 2, 4, 1]) → False
+array123([1, 1, 2, 1, 2, 3]) → True
+'''
+
+def array123(numbers):
+    for i in range(len(numbers) - 2):
+        if numbers[i] == 1 and numbers[i + 1] == 2 and numbers[i + 2] == 3:
+            return True
+    return False
+
+print(array123([1, 1, 2, 3, 1]))
