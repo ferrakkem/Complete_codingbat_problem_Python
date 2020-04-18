@@ -368,4 +368,39 @@ make_abba('What', 'Up') → 'WhatUpUpWhat'
 def make_abba(a, b):
     return a+b+b+a
 
-print(make_abba('Yo', 'Alice'))
+#print(make_abba('Yo', 'Alice'))
+
+
+'''
+The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text.
+In this example, the "i" tag makes <i> and </i> which surround the word "Yay". 
+Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
+
+make_tags('i', 'Yay') → '<i>Yay</i>'
+make_tags('i', 'Hello') → '<i>Hello</i>'
+make_tags('cite', 'Yay') → '<cite>Yay</cite>'
+'''
+
+def make_tags(tag, string):
+    making_tag = "<{tag}>".format(tag)
+    print(making_tag)
+
+#make_tags('i','yay')
+
+'''
+Given an "out" string length 4, such as "<<>>", and a word, 
+return a new string where the word is in the middle of the out string, e.g. "<<word>>".
+
+make_out_word('<<>>', 'Yay') → '<<Yay>>'
+make_out_word('<<>>', 'WooHoo') → '<<WooHoo>>'
+make_out_word('[[]]', 'word') → '[[word]]
+'''
+
+def make_out_word (str1, str2):
+    frist = str1[:2]
+    second = str1[2:]
+    return frist+str2+second
+
+
+print(make_out_word('[[]]', 'Yay'))
+
