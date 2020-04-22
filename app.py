@@ -817,11 +817,12 @@ def no_teen_sum(a, b, c):
 
 
 def fix_teen(n):
+    #checking in the range 13..19 inclusive then that value counts as 0, except 15 and 16 do not count as a teens
     if  n >=13 and n <= 19 and n !=15 and n!= 16:
         return 0
     return n
 
-print(no_teen_sum(2, 1, 14))
+#print(no_teen_sum(2, 1, 16))
 
 '''
 For this problem, we'll round an int value up to the next multiple of 10 
@@ -836,9 +837,16 @@ round_sum(16, 17, 18) → 60
 round_sum(12, 13, 14) → 30
 round_sum(6, 4, 4) → 10
 '''
-def round_sum():
-    pass
+def round_sum(a, b, c):
+    return round10(a)+round10(b)+round10(c)
 
+def round10(num):
+    if num%10 <5:
+        return num - (num%10)
+    else:
+        return num + (10 - num%10)
+
+print(round_sum(16, 17, 18))
 
 
 
