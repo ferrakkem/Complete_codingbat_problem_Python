@@ -846,8 +846,46 @@ def round10(num):
     else:
         return num + (10 - num%10)
 
-print(round_sum(16, 17, 18))
+#print(round_sum(16, 17, 18))
+
+'''
+Given three ints, a b c, return True if one of b or c is "close" (differing from a by at most 1), 
+while the other is "far", differing from both other values by 2 or more. 
+Note: abs(num) computes the absolute value of a number.
+
+close_far(1, 2, 10) → True
+close_far(1, 2, 3) → False
+close_far(4, 1, 3) → True
+'''
+def close_far():
+    pass
 
 
+'''
+We want make a package of goal kilos of chocolate. 
+We have small bars (1 kilo each) and big bars (5 kilos each). 
+Return the number of small bars to use, assuming we always use big bars before small bars. 
+Return -1 if it can't be done.
 
+make_chocolate(4, 1, 9) → 4
+make_chocolate(4, 1, 10) → -1
+make_chocolate(4, 1, 7) → 2
+'''
 
+#--------------------------------string-2-----------------------------------------------
+
+'''
+Given a string, return a string where for every char in the original, there are two chars.
+
+double_char('The') → 'TThhee'
+double_char('AAbb') → 'AAAAbbbb'
+double_char('Hi-There') → 'HHii--TThheerree'
+'''
+def double_char(string):
+    new_string = ""
+
+    for i in string:
+        new_char = i*2
+        new_string = new_string + new_char
+    return new_string
+print(double_char('Hi-There'))
