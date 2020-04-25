@@ -981,11 +981,11 @@ xyz_there('xyz.abc') → True
 def xyz_there(string):
     check_xyz = string.count('xyz')
     dot_count = string.count('.xyz')
-    print(f'{check_xyz} and {dot_count}')
+    #print(f'{check_xyz} and {dot_count}')
 
     if check_xyz==dot_count:
         return False
     else:
         return True
 
-print(xyz_there('abc.xyz'))
+print(xyz_there('abcxyz'))
