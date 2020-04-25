@@ -946,4 +946,37 @@ def count_code(string):
             count = count+1
     return count
 
-print(count_code('cozexxcope'))
+#print(count_code('cozexxcope'))
+
+
+'''
+Given two strings, return True if either of the strings appears at the very end of the other string, 
+ignoring upper/lower case differences (in other words, the computation should not be "case sensitive"). 
+Note: s.lower() returns the lowercase version of a string.
+
+end_other('Hiabc', 'abc') → True
+end_other('AbC', 'HiaBc') → True
+end_other('abc', 'abXabc') → True
+'''
+def end_other(str1, str2):
+    str1_last_chat = str1[-1]
+    str2_last_chat = str2[-1]
+    #print(str1_last_chat)
+    #print(str2_last_chat)
+    if str1_last_chat.lower() == str2_last_chat.lower():
+        return True
+    else:
+        return False
+
+print(end_other('Abd', 'HiaBc'))
+
+'''
+Return True if the given string contains an appearance of "xyz" where the xyz is not directly preceeded by a period (.). 
+So "xxyz" counts but "x.xyz" does not.
+
+xyz_there('abcxyz') → True
+xyz_there('abc.xyz') → False
+xyz_there('xyz.abc') → True
+'''
+def xyz_there():
+    pass
