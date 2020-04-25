@@ -888,4 +888,21 @@ def double_char(string):
         new_char = i*2
         new_string = new_string + new_char
     return new_string
-print(double_char('Hi-There'))
+#print(double_char('Hi-There'))
+
+'''
+Return the number of times that the string "hi" appears anywhere in the given string.
+
+count_hi('abc hi ho') → 1
+count_hi('ABChi hi') → 2
+count_hi('hihi') → 2
+'''
+
+def count_hi(string):
+    cout = 0
+
+    for i in range(len(string)-1):
+        if string[i] =='h' and string[i+1] == 'i':
+            cout = cout+1
+    return cout
+print(count_hi('hihi'))
