@@ -968,7 +968,7 @@ def end_other(str1, str2):
     else:
         return False
 
-print(end_other('Abd', 'HiaBc'))
+#print(end_other('Abd', 'HiaBc'))
 
 '''
 Return True if the given string contains an appearance of "xyz" where the xyz is not directly preceeded by a period (.). 
@@ -978,5 +978,14 @@ xyz_there('abcxyz') → True
 xyz_there('abc.xyz') → False
 xyz_there('xyz.abc') → True
 '''
-def xyz_there():
-    pass
+def xyz_there(string):
+    check_xyz = string.count('xyz')
+    dot_count = string.count('.xyz')
+    print(f'{check_xyz} and {dot_count}')
+
+    if check_xyz==dot_count:
+        return False
+    else:
+        return True
+
+print(xyz_there('abc.xyz'))
