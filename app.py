@@ -1055,7 +1055,7 @@ def sum14(numbers):
 
     return sum
 
-print(sum14([1, 2,1,1,2,14,1,1]))
+#print(sum14([1, 2,1,1,2,14,1,1]))
 
 '''
 Return the sum of the numbers in the array, 
@@ -1066,3 +1066,23 @@ sum67([1, 2, 2]) → 5
 sum67([1, 2, 2, 6, 99, 99, 7]) → 5
 sum67([1, 1, 6, 7, 2]) → 4
 '''
+
+def sum67(numbers):
+    result = 0
+    flag = True
+
+    for num in numbers:
+        if num == 6:
+            flag = False
+        if flag:
+            result += num
+        if num == 7:
+            flag = True
+    return result
+
+
+
+
+print(sum67([1, 2, 2, 6, 99, 99, 7]))
+
+
