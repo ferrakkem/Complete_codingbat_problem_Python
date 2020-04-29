@@ -1034,6 +1034,9 @@ centered_average([1, 2, 3, 4, 100]) → 3
 centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
 centered_average([-10, -4, -2, -4, -2, 0]) → -3
 '''
+def centered_average():
+    pass
+
 
 '''
 Return the sum of the numbers in the array, returning 0 for an empty array. 
@@ -1081,8 +1084,22 @@ def sum67(numbers):
     return result
 
 
-
-
 print(sum67([1, 2, 2, 6, 99, 99, 7]))
 
+'''
+Given an array of ints, return True if the array contains a 2 next to a 2 somewhere.
 
+has22([1, 2, 2]) → True
+has22([1, 2, 1, 2]) → False
+has22([2, 1, 2]) → False
+'''
+
+def has22(nums):
+
+    for i in nums:
+        if nums[i] == 2 and nums[i+1] == 2:
+            return True
+        else:
+            return False
+
+print(has22([1, 2, 1, 2]))
