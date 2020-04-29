@@ -1018,11 +1018,14 @@ big_diff([2, 10, 7, 2]) → 8
 '''
 
 def big_diff(numbers):
-    pass
+    lg_num = max(numbers)
+    sm_num = min(numbers)
+
+    difference = lg_num - sm_num
+    return difference
 
 
-big_diff([10, 3, 5, 6])
-
+print(big_diff([7, 2, 10, 9]))
 
 '''
 Return the "centered" average of an array of ints, which we'll say is the mean average of the values, 
@@ -1102,4 +1105,4 @@ def has22(nums):
         else:
             return False
 
-print(has22([1, 2, 1, 2]))
+#print(has22([1, 2, 1, 2]))
